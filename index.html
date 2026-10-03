@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Многощетинковые черви - Презентация</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .presentation {
+            width: 100%;
+            max-width: 1000px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        .slide {
+            display: none;
+            width: 100%;
+            padding: 60px 50px;
+            min-height: 700px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .slide.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .slide h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .slide h2 {
+            font-size: 40px;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .slide p, .slide li {
+            font-size: 22px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .slide ul {
+            margin-left: 30px;
+        }
+        
+        .slide-image {
+            width: 100%;
+            max-width: 500px;
+            height: 300px;
+            margin: 30px 0;
+            border-radius: 10px;
+            object-fit: cover;
+            border: 3px solid white;
+        }
+        
+        .slide-title {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+        
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: #f0f0f0;
+        }
+        
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #764ba2;
+        }
+        
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .slide-counter {
+            font-size: 18px;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 8px;
+        }
+        
+        /* Разные фоны для слайдов */
+        .slide.title-slide {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            text-align: center;
+        }
+        
+        .slide.content-slide {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .slide.conclusion-slide {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            text-align: center;
+        }
+        
+        .subtitle {
+            font-size: 28px;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .author {
+            font-size: 18px;
+            opacity: 0.8;
+            margin-top: 40px;
+        }
+        
+        .fact-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid white;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation">
+        <!-- СЛАЙД 1: ТИТУЛЬНЫЙ -->
+        <div class="slide title-slide active">
+            <div style="text-align: center;">
+                <h1>🌊 МНОГОЩЕТИНКОВЫЕ ЧЕРВИ 🌊</h1>
+                <p class="subtitle">Класс кольчатых червей, живущих в морях</p>
+                <img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=500&h=300&fit=crop" alt="Море" class="slide-image">
+                <p class="author">Автор: [Твое имя]</p>
+                <p class="author">Класс 8-А</p>
+                <p class="author">2024 год</p>
+            </div>
+        </div>
+        
+        <!-- СЛАЙД 2: ЧТО ЭТО? -->
+        <div class="slide content-slide">
+            <h2><span class="emoji">❓</span>Что такое многощетинковые черви?</h2>
+            <ul>
+                <li><span class="emoji">🌊</span><strong>Морские животные</strong> - живут только в океанах и морях</li>
+                <li><span class="emoji">🪱</span><strong>Кольчатые черви</strong> - родственники дождевых червей</li>
+                <li><span class="emoji">✨</span><strong>Красивые</strong> - много ярких цветов и оттенков</li>
+                <li><span class="emoji">🏠</span><strong>Разнообразные</strong> - встречаются в разных местах на дне</li>
+            </ul>
+            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=500&h=300&fit=crop" alt="Морские черви" class="slide-image">
+            <p class="slide-title">Многощетинковые черви - удивительные морские животные</p>
+        </div>
+        
+        <!-- СЛАЙД 3: ГДЕ ЖИВУТ -->
+        <div class="slide content-slide">
+            <h2><span class="emoji">🗺️</span>Где они живут?</h2>
+            <ul>
+                <li><span class="emoji">🌊</span>В морях и океанах всего мира</li>
+                <li><span class="emoji">🏖️</span>На мелководье и на глубине до 6000 метров</li>
+                <li><span class="emoji">🏠</span>В норах в песке и грязи</li>
+                <li><span class="emoji">🪨</span>Среди камней и водорослей</li>
+                <li><span class="emoji">🏗️</span>Некоторые строят трубки из песка и слизи</li>
+            </ul>
+            <img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=500&h=300&fit=crop" alt="Морское дно" class="slide-image">
+            <p class="slide-title">Морское дно - родной дом для многощетинковых червей</p>
+        </div>
+        
+        <!-- СЛАЙД 4: КАК ВЫГЛЯДЯТ -->
+        <div class="slide content-slide">
+            <h2><span class="emoji">👀</span>Как они выглядят?</h2>
+            <ul>
+                <li><span class="emoji">⭕</span><strong>Тело в кольцах</strong> - разделено на множество сегментов</li>
+                <li><span class="emoji">🪶</span><strong>Щетинки</strong> - острые волоски для движения</li>
+                <li><span class="emoji">🦐</span><strong>Параподии</strong> - маленькие лапки по бокам</li>
+                <li><span class="emoji">👁️</span><strong>Голова с усиками</strong> - для поиска еды</li>
+                <li><span class="emoji">🎨</span><strong>Яркие цвета</strong> - красные, оранжевые, голубые, фиолетовые!</li>
+            </ul>
+            <img src="https://images.unsplash.com/photo-1517654098869-8a7a3f9a53e2?w=500&h=300&fit=crop" alt="Структура червя" class="slide-image">
+            <p class="slide-title">Внешнее строение многощетинкового червя</p>
+        </div>
+        
+        <!-- СЛАЙД 5: ВНУТРЕННЕЕ СТРОЕНИЕ -->
+        <div class="slide content-slide">
+            <h2><span class="emoji">🔍</span>Что внутри?</h2>
+            <ul>
+                <li><span class="emoji">🧠</span><strong>Нервная система</strong> - проходит вдоль всего тела</li>
+                <li><span class="emoji">❤️</span><strong>Кровь</strong> - циркулирует в кровеносных сосудах</li>
+                <li><span class="emoji">🍽️</span><strong>Кишечник</strong> - длинный канал для пищеварения</li>
+                <li><span class="emoji">💨</span><strong>Жабры</strong> - помогают дышать под водой</li>
+                <li><span class="emoji">💧</span><strong>Гидроскелет</strong> - жидкость держит форму тела</li>
+            </ul>
+            <div class="fact-box">
+                <strong>Интересный факт:</strong> У многощетинковых червей есть КРОВЬ, как и у нас! Правда, она может быть другого цвета - зеленой, голубой или фиолетовой.
+            </div>
+            <img src="https://images.unsplash.com/photo-1576091160550-112173e7f50b?w=500&h=300&fit=crop" alt="Анатомия" class="slide-image">
+        </div>
+        
+        <!-- СЛАЙД 6: ДВИЖЕНИЕ -->
+        <div class="slide content-slide">
+            <h2><span class="emoji">🚀</span>Как они двигаются?</h2>
+            <ul>
+                <li><span class="emoji">🏊</span><strong>Волнообразные движения</strong> - тело волнует, как змея в воде</li>
+                <li><span class="emoji">🪶</span><strong>Щетинки цепляются</strong> - помогают продвигаться по дну</li>
+                <li><span class="emoji">🦐</span><strong>Параподии работают</strong> - как маленькие веслá</li>
+                <li><span class="emoji">⚡</span><strong>Быстрые движения</strong> - некоторые виды очень проворные!</li>
+            </ul>
+            <img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=500&h=300&fit=crop" alt="Движение" class="slide-image">
+            <p class="slide-title">Многощетинковые черви легко плавают в морской воде</p>
+        </div>
+        
+        <!-- СЛАЙД 7: ПИТАНИЕ -->
+        <div class="slide content-slide">
+            <h2><span class="emoji">🍽️</span>Что они едят?</h2>
+            <div class="fact-box">
+                <strong>🌀 ФИЛЬТРАТОРЫ:</strong> Сидят в трубке и едят планктон - мелких организмов из воды
+            </div>
+            <div class="fact-box">
+                <strong>🦈 ХИЩНИКИ:</strong> Охотятся на рыб и других животных, даже едят других червей!
+            </div>
+            <div class="fact-box">
+                <strong>♻️ САНИТАРЫ:</strong> Едят остатки мертвых животных и растений - чистят дно
+            </div>
+            <img src="https://images.unsplash.com/photo-1511379938547-c1f69b13d835?w=500&h=300&fit=crop" alt="Питание" class="slide-image">
+            <p class="slide-title">Разные виды червей питаются по-разному</p>
+        </div>
+        
+        <!-- СЛАЙД 8: РАЗМНОЖЕНИЕ -->
+        <div class="slide content-slide">
+            <h2><span class="emoji">👶</span>Как они размножаются?</h2>
+            <ul>
+                <li><span class="emoji">♂️♀️</span><strong>Самцы и самки</strong> - откладывают яйца в воду</li>
+                <li><span class="emoji">🥚</span><strong>Из яиц вылупляются личинки</strong> - маленькие и плывут в воде</li>
+                <li><span class="emoji">🔄</span><strong>Метаморфоз</strong> - личинка превращается во взрослого червя</li>
+                <li><span class="emoji">⏰</span><strong>Развитие</strong> - может занять от недель до месяцев</li>
+            </ul>
+            <div class="fact-box">
+                <strong>Удивительно:</strong> У некоторых видов есть очень сложный и странный жизненный цикл, который длится годы!
+            </div>
+            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=500&h=300&fit=crop" alt="Личинки" class="slide-image">
+        </div>
+        
+        <!-- СЛАЙД 9: ЗНАЧЕНИЕ В ПРИРОДЕ -->
+        <div class="slide content-slide">
+            <h2><span class="emoji">🌍</span>Зачем они нужны?</h2>
+            <div class="fact-box">
+                <span class="emoji">🔄</span><strong>РАЗЛОЖЕНИЕ:</strong> Перерабатывают мертвый материал и очищают морское дно
+            </div>
+            <div class="fact-box">
+                <span class="emoji">🍽️</span><strong>ЕДА:</strong> Важный источник питания для рыб, крабов и осьминогов
+            </div>
+            <div class="fact-box">
+                <span class="emoji">🌱</span><strong>ПИТАТЕЛЬНЫЕ ВЕЩЕСТВА:</strong> Возвращают важные вещества в воду и почву
+            </div>
+            <div class="fact-box">
+                <span class="emoji">⚖️</span><strong>БАЛАНС:</strong> Без них морские экосистемы были бы грязнее и беднее
+            </div>
+            <p style="margin-top: 30px;"><strong>ВЫВОД: Многощетинковые черви - это санитары морей! 🧹</strong></p>
+        </div>
+        
+        <!-- СЛАЙД 10: ИНТЕРЕСНЫЕ ФАКТЫ -->
+        <div class="slide content-slide">
+            <h2><span class="emoji">✨</span>Интересные факты!</h2>
+            <div class="fact-box">
+                <span class="emoji">💡</span>Некоторые черви <strong>СВЕТЯТСЯ!</strong> Светят зеленым или голубым светом в темноте!
+            </div>
+            <div class="fact-box">
+                <span class="emoji">🏗️</span>Есть черви, которые сами строят себе <strong>ДОМИКИ из песка!</strong> Как архитекторы!
+            </div>
+            <div class="fact-box">
+                <span class="emoji">📏</span>Некоторые вырастают до <strong>1-2 МЕТРОВ в длину!</strong> Очень длинные!
+            </div>
+            <div class="fact-box">
+                <span class="emoji">🎨</span>Их яркие цвета <strong>защищают от хищников</strong> или помогают привлекать партнёров
+            </div>
+            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=500&h=300&fit=crop" alt="Черви" class="slide-image">
+        </div>
+        
+        <!-- СЛАЙД 11: ПРИМЕРЫ ВИДОВ -->
+        <div class="slide content-slide">
+            <h2><span class="emoji">🔴</span>Известные виды</h2>
+            <div class="fact-box">
+                <strong>🔴 Песочные черви (Arenicola):</strong> Живут в норах в песке, ловят добычу
+            </div>
+            <div class="fact-box">
+                <strong>🌈 Морские звездочеты (Spirobranchus):</strong> Красивые с витой спиралью вместо жабр
+            </div>
+            <div class="fact-box">
+                <strong>⚫ Нереиды (Nereis):</strong> Хищные черви, похожи на маленьких морских драконов
+            </div>
+            <div class="fact-box">
+                <strong>🟢 Офелии (Ophelia):</strong> Маленькие черви, живут в песке на пляжах
+            </div>
+            <img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=500&h=300&fit=crop" alt="Виды" class="slide-image">
+            <p class="slide-title">Разные виды многощетинковых червей</p>
+        </div>
+        
+        <!-- СЛАЙД 12: ВЫВОД -->
+        <div class="slide conclusion-slide">
+            <div style="text-align: center;">
+                <h2>📌 ИТОГ</h2>
+                <ul style="text-align: left; display: inline-block;">
+                    <li><span class="emoji">🌊</span>Многощетинковые черви - УДИВИТЕЛЬНЫЕ морские животные!</li>
+                    <li><span class="emoji">🏠</span>Живут в морях всего мира на разн��х глубинах</li>
+                    <li><span class="emoji">⭕</span>Тело разделено на сегменты с щетинками</li>
+                    <li><span class="emoji">🍽️</span>Питаются по-разному: охотятся, фильтруют, едят остатки</li>
+                    <li><span class="emoji">🌍</span>ВАЖНЫ ДЛЯ ПРИРОДЫ - чистят дно и кормят других животных</li>
+                    <li><span class="emoji">🎨</span>Очень красивые и разнообразные!</li>
+                </ul>
+                <p style="margin-top: 40px; font-size: 32px;"><strong>СПАСИБО ЗА ВНИМАНИЕ! 🌊✨</strong></p>
+            </div>
+        </div>
+        
+        <!-- УПРАВЛЕНИЕ -->
+        <div class="controls">
+            <button onclick="previousSlide()" id="prevBtn">← Назад</button>
+            <span class="slide-counter"><span id="current">1</span> / <span id="total">12</span></span>
+            <button onclick="nextSlide()" id="nextBtn">Далее →</button>
+        </div>
+    </div>
+    
+    <script>
+        let currentSlide = 1;
+        const totalSlides = document.querySelectorAll('.slide').length;
+        
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            
+            if (n > totalSlides) {
+                currentSlide = totalSlides;
+            }
+            if (n < 1) {
+                currentSlide = 1;
+            }
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide - 1].classList.add('active');
+            
+            document.getElementById('current').textContent = currentSlide;
+            document.getElementById('prevBtn').disabled = currentSlide === 1;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides;
+        }
+        
+        function nextSlide() {
+            currentSlide++;
+            showSlide(currentSlide);
+        }
+        
+        function previousSlide() {
+            currentSlide--;
+            showSlide(currentSlide);
+        }
+        
+        // Клавиши для навигации
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') previousSlide();
+        });
+        
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
